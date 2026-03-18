@@ -1,0 +1,1 @@
+*/1 * * * * root ps -A | grep "npm run start" > /dev/null 2>&1 || (cd /opt/discord-bot && npm run start > /dev/null 2>&1) &
