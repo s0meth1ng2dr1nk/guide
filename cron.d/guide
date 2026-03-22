@@ -1,1 +1,1 @@
-*/1 * * * * root ps -A | grep "npm run start" > /dev/null 2>&1 || (cd /opt/guide && npm run start > /dev/null 2>&1) &
+*/1 * * * * root ps -A | grep "npm run start" | awk '{print $1}' | xargs -i ls -la /proc/{}/cwd | grep -F /opt/guide > /dev/null 2>&1 || (cd /opt/guide && npm run start > /dev/null 2>&1) &
