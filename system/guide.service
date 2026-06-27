@@ -1,0 +1,17 @@
+[Unit]
+Description=Guide Node App
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/guide
+
+ExecStart=/usr/bin/node /usr/lib/node_modules/npm/bin/npm-cli.js run start
+
+Restart=always
+RestartSec=3
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

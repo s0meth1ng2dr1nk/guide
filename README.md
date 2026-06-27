@@ -2,6 +2,17 @@
 git clone https://github.com/s0meth1ng2dr1nk/guide.git /opt/guide
 cd /opt/guide
 npm install
-cp -f /opt/guide/cron.d/guide /etc/cron.d
-chmod 644 /etc/cron.d/guide
+```
+
+```bash
+vi .env
+# envs > guide > .env
+```
+
+```bash
+cd /etc/systemd/system
+ln -nfs /opt/guide/system/guide.service
+systemctl daemon-reload
+systemctl enable guide
+systemctl start guide
 ```
