@@ -10,6 +10,9 @@ Description=Guide Node App
 After=network.target
 
 [Service]
+User=root
+Group=root
+
 WorkingDirectory=${BASE}
 
 ExecStart=$(command -v pnpm) run start
