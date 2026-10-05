@@ -1,4 +1,3 @@
-require('dotenv').config();
 const path = require('node:path');
 const { SlashCommandBuilder } = require('discord.js');
 const Ec2 = require(path.join(path.dirname(require.main.filename), 'util/ec2.js'));

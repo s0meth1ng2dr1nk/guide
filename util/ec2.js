@@ -1,4 +1,3 @@
-require('dotenv').config();
 const {setTimeout} = require("timers/promises");
 const { 
   EC2Client, 
